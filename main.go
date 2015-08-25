@@ -107,7 +107,7 @@ func makeDir(dir string) {
 	file, err := os.Open(dir)
 	if err != nil {
 		if os.IsNotExist(err) {
-			err = os.Mkdir(dir, os.ModeDir);
+			err = os.Mkdir(dir, 0777);
 			checkError(err)
 		} else {
 			checkError(err)
