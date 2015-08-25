@@ -11,3 +11,12 @@ ansible-galaxy install -i -r required-roles.txt
 ansible-playbook -i dev playbook.yml
 ```
 You may want to change dev/group_vars/redis.yml to override the defaults provided by azavea.redis.
+
+It's also possible to specify multiple VMs
+```
+erics redis:azavea.redis db:user.postgres
+```
+ansible galaxy roles are optional
+```
+erics vm1 vm2 vm3
+```
